@@ -1,0 +1,729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>tuan_new_product</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: 29d1c5bc36da364ad5aa86946d420b7bbc54a253 */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>团购商品添加新流程设计方案</h1>
+<h2>方案流程图</h2>
+<img src='tuan_new_product.jpg'/>
+<h2>功能模块说明</h2>
+<h3>有享团供应商管理平台</h3>
+<h4>商品管理 &gt; 所有商品</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>以商品编号、商品名称（模糊查询）、审核状态、商品状态、是否首页显示、商品添加来源（add_from=2）为查询条件，以列表的形式进行展示，列表项：</p>
+<p>商品编码、商品标题、商品库存、仓库类型、是否有享网做图、市场价、有享价、商品分类、商品状态、是否首页显示、浏览次数、上架时间、下架时间、添加时间。</p>
+</blockquote>
+<p><strong>新增</strong></p>
+<blockquote>
+<p>点击新增按钮，跳转到新增商品页面，页面内容：</p>
+<pre><code>1、商品SKU分类（下拉列表），SKU属性。选择SKU分类，动态显示SKU属性，供应商勾选自己对应的商品的SKU属性。
+2、仓库类型（下拉列表： 实仓/虚仓），备注说明：实仓是指需要发货到有享网仓库的商品
+3、商品库存，默认为0，备注说明：默认为0，表示库存无限
+4、商品分类：从类目表获取到商品的类目。
+5、运费模板：根据供应商，查找shop_postagemode，获取到该供应商下对应的运费模版
+6、商品毛重：默认1000，输入框后面加上单位：克
+7、几件起免运费（下拉列表）：默认每件需要运费，备注说明：可直接输入您想要的数字；当运费模版是免运费时，该选项无效。
+8、商品标题（250个字以内）
+9、三包期限：默认为0，备注说明：以月为单位，0表示没有三包期限信息，-1表示终身保修
+10、详细页面主图：453x340
+11、往期团购图片：200x120
+12、首页列表图片：280x190
+13、搜狗API图片：280x175
+14、市场价格
+15、建议有享价（写入数据库的是有享价这个字段）
+16、每人限购数量，备注说明：即一个用户可以购买的数量，默认为0，表示无限制
+17、是否有享网做图（复选框），默认不勾选，若勾选，该下方显示备注输入框（输入框旁加上提示信息：请在备注框中注明需要有享网做哪些图片），
+    表单提交时，需要判断该输入框是否为空，若为空，则不能提交。
+18、商品描述
+19、商品添加来源，隐藏域，add_from=2
+20、商品上架时间与下架时间，上架时间默认00:00:00，下架时间默认：23:59:59。
+</code></pre>
+
+<p>详细页面主图、往期团购图片、首页列表图片、搜狗API图片，这四项可以为空，其余内容都为必填项，
+点击提交按钮，对数字及图片大小需要做验证（这块参考现有的团购添加商品功能），验证通过后，将内容写入到数据库中，所属的店铺为当前的供应商，is_edit置为1。</p>
+</blockquote>
+<p><strong>修改</strong></p>
+<blockquote>
+<p>选中一个商品，点击修改按钮，判断该商品的审核状态是否为编辑中、一审不通过、二审不通过、三审不通过(audit_status=1||audit_status=3||<span style="color:red">audit_status=6||audit_status=8</span>)，
+若不是，则不能修改，并给出相应的提示信息。
+若是，则进入修改页面，页面内容：同添加。点击提交按钮，对数字及图片大小需要做验证（这块参考现有的团购修改商品功能），验证通过后，将内容写入到数据库中，audit_status置为1，is_edit置为1。</p>
+</blockquote>
+<p><strong>提交审核</strong></p>
+<blockquote>
+<p>勾选商品，点击提交审核按钮，需做如下判断</p>
+<pre><code>1、判断该商品的is_edit是否为1，若不是，则不能提交审核，并给出相应的提示信息。
+2、判断选中的商品的审核状态是否为1，若是1，则将该商品的审核状态置为待一审(audit_status=2)，
+   若不是1，则不能改变商品的审核状态，并将该商品编号及该商品的审核状态放入map中。
+</code></pre>
+
+<p>当遍历完所有商品后，弹出提示框——“提交成功X个，失败X个，失败原因：商品xxx状态为xx，不能提交审核！”，失败原因需要换行，一行一个失败原因。</p>
+<p>提交审核后，商品的状态为待一审状态(audit_status=2)。</p>
+</blockquote>
+<p><strong><span style="color:red">撤销提交</span></strong></p>
+<blockquote>
+<p>选中一个商品，点击撤销提交按钮，需做如下验证：</p>
+<pre><code>该商品是否处于待一审状态，若不是，则不能撤销，并给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，将撤销审核的商品状态置为编辑中，更新最后一次撤销时间。</p>
+</blockquote>
+<p><strong><span style="color:red">删除</span></strong></p>
+<blockquote>
+<p>选中一个商品，点击删除按钮，需做如下验证：</p>
+<pre><code>该商品的审核状态是否是编辑中或者一审未通过商品，若不是，则不能删除，并给出提示信息。
+</code></pre>
+
+<p><span style="color:red">tips:需处理的表：item，sku，各个站点下的该商品记录，item_for_label</span></p>
+</blockquote>
+<p><strong>商品复制</strong></p>
+<blockquote>
+<p>在原有的商品复制功能上新增一个字段：商品添加来源。</p>
+<p>复制的商品必须先修改才能提交审核。</p>
+</blockquote>
+<p><strong>查看审核记录</strong></p>
+<blockquote>
+<p>选中商品，点击查看审核记录按钮，弹出div层，div层内容：</p>
+<pre><code>审核记录列表，列表项：审核类型、审核意见、审核人、审核时间、备注。
+</code></pre>
+
+</blockquote>
+<h4><span style="color:red">物流管理 &gt; 运费模版管理</span></h4>
+<p><strong><span style="color:red">查询</span></strong></p>
+<blockquote>
+<p>查询运费模版表（PostageMode）和店铺运费模版关联表（shop_postagemode），获取到该店铺的运费模板，
+通过模版编号、模版名称、模块状态为查询条件，
+以列表的形式进行展示，列表项：编号、运费模版名称、快递费用、快递加件费用、创建时间、修改日期、状态、添加来源。</p>
+</blockquote>
+<p><strong><span style="color:red">添加</span></strong></p>
+<blockquote>
+<p>同后台的运费模板添加功能。在此基础上，添加时，需将商家ID写入到PostageMode表中，并且PostageMode.add_from置为1。
+同时需将运费模板ID、商家ID、创建人、创建时间一起写入shop_postagemode表中。</p>
+</blockquote>
+<p><strong><span style="color:red">修改</span></strong></p>
+<blockquote>
+<p>同后台的运费模板修改功能。在此基础上，需在进入修改页面及点击提交时，都需做如下判断：</p>
+<pre><code>1、该运费模板的add_from是否为1，若不为1，则不能修改。
+2、该运费模版绑定的商品是否有待一审（audit_status=2）、待二审（audit_status=4）、二审通过（audit_status=5）、三审通过（audit_status=7）这四种状态，
+   若有，则不能修改。
+</code></pre>
+
+<p>修改完成后，写入日志，供应商平台修改日志与后台修改日志需做区分。</p>
+</blockquote>
+<p><strong><span style="color:red">查看详细</span></strong></p>
+<blockquote>
+<p>同后台的运费模板查看详细功能。</p>
+</blockquote>
+<p><strong><span style="color:red">添加运费模板项</span></strong></p>
+<blockquote>
+<p>同后台的添加运费模板项功能。在此基础上，点击添加运费模板项按钮及点击提交时，都需做如下判断：</p>
+<pre><code>1、该运费模板的add_from是否为1，若不为1，则不能添加。
+2、该运费模版绑定的商品是否有待一审（audit_status=2）、待二审（audit_status=4）、二审通过（audit_status=5）、三审通过（audit_status=7）这四种状态，
+   若有，则不能添加。
+</code></pre>
+
+<p>添加完成后，需写入日志，供应商平台修改日志与后台修改日志需做区分。</p>
+</blockquote>
+<p><strong><span style="color:red">复制模版</span></strong></p>
+<blockquote>
+<p>同后台的复制模版功能。在此基础上，需将商家ID写入到PostageMode表中，并且PostageMode.add_from置为1。
+同时需将运费模板ID、商家ID、创建人、创建时间一起写入shop_postagemode表中。</p>
+</blockquote>
+<h3>有享网后台管理系统(yofogoadmin)</h3>
+<h4>团购 -&gt; 商品管理 -&gt; 所有商品</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>新增查询：是否有享网做图、商品上架时间段、审核状态、商品来源。</p>
+<p>列表新增列：是否有享网做图、审核状态、商品来源、仓库类型。</p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>在查看详细页面增加四个字段的显示：是否有享网做图，审核状态、商品来源、备注</p>
+</blockquote>
+<p><strong>新增</strong></p>
+<blockquote>
+<p>新增的商品写入数据库时，在原有的基础上，需要将is_edit置为1。</p>
+</blockquote>
+<p><strong>修改</strong></p>
+<blockquote>
+<p>选中一个商品，点击修改按钮，做如下处理：</p>
+<pre><code>若是后台添加的商品：
+    一审不通过、二审不通过、三审不通过，需将审核状态置为编辑中。
+若是供应商添加的商品：
+    不更改审核状态
+</code></pre>
+
+</blockquote>
+<p><strong>提交审核</strong></p>
+<blockquote>
+<p>勾选商品，点击提交审核按钮，需做如下判断</p>
+<pre><code>1、判断该商品的is_edit是否为1，若不是，则不能提交审核，并给出相应的提示信息。
+2、判断选中的商品的审核状态是否为1，若是1，则将该商品的审核状态置为待一审(audit_status=2)，
+   若不是1，则不能改变商品的审核状态，并将该商品编号及该商品的审核状态放入map中。
+</code></pre>
+
+<p>当遍历完所有商品后，弹出提示框——“提交成功X个，失败X个，失败原因：商品xxx状态为xx，不能提交审核！”，失败原因需要换行，一行一个失败原因。</p>
+<p>提交审核后，商品的状态为待一审状态(audit_status=2)。</p>
+</blockquote>
+<p><strong>上架</strong></p>
+<blockquote>
+<p>选中一个商品，点击上架按钮，在原有的基础上，还需增加一个判断：判断该商品是否三审通过(audit_status=7)，若不是，则不能上架，并给出相应的提示信息。</p>
+</blockquote>
+<p><strong>商品复制</strong></p>
+<blockquote>
+<p>在原有的商品复制功能上新增一个字段：商品添加来源。</p>
+<p>复制的商品必须先修改才能提交审核。</p>
+</blockquote>
+<p><strong>商品状态修改</strong></p>
+<blockquote>
+<p>若该商品从编辑中变为即将开团，需要判断该商品的审核状态是否为三审通过(audit_status=7)，若不是，则不能通过，并给出相应的提示信息。</p>
+</blockquote>
+<h4>团购 -&gt; 商品管理 -&gt; 待一审的商品</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>以商品编号、商品名称（模糊查询）、审核状态(audit_status=2)、商品状态为查询条件，以列表的形式进行展示，列表项：</p>
+<p>商品编码、商品标题、商品库存、仓库类型、是否有享网做图、市场价、有享价、商品分类、商品状态、审核状态、商品来源、是否首页显示、浏览次数、上架时间、下架时间、添加时间。
+按照上架时间升序来排序。</p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>同所有商品的查看详细功能。</p>
+</blockquote>
+<p><strong>审核</strong></p>
+<blockquote>
+<p>选中商品，点击审核按钮，进入审核页面，页面内容：同查看详细页面
+页面底部有审核意见编辑框、一审通过按钮、一审不通过按钮、修改按钮。</p>
+<p>一审通过</p>
+<p>点击一审通过按钮，需作如下处理：</p>
+<p>1、<span style="color:red">验证该商品是否为待一审状态，若不是，则不能审核。</span></p>
+<p>2、商品的审核状态置为待二审（audit_status=4）。</p>
+<p>3、审核意见若没有填写，直接给审核意见赋值——‘一审通过’。</p>
+<p>4、若审核意见不为空，则在审核意见前面加上‘一审通过：’</p>
+<p>一审不通过</p>
+<p>点击一审不通过按钮，需做如下处理：</p>
+<p>1、<span style="color:red">验证该商品是否为待一审状态，若不是，则不能审核。</span></p>
+<p>2、商品的审核状态置为一审不通过(audit_status=3)。</p>
+<p>3、审核意见需要填写，并在审核意见前面加上‘一审不通过：’，若为空，则不能提交。</p>
+<p>修改</p>
+<pre><code>点击修改按钮，跳往修改页面，页面内容同现有的修改页面
+商品标题、详细页面主图、往期团购图片、新版列表图片、搜狗API图片、商品描述这几项为可编辑状态，
+其余各项为不可编辑状态。点击提交按钮后，会将数据写入到数据库中，保存完后，返回到审核页面。
+修改页面底部有返回审核页面按钮，点击返回审核页面。
+</code></pre>
+
+</blockquote>
+<h4>团购 -&gt; 商品管理 -&gt; 待二审的商品</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>以商品编号、商品名称（模糊查询）、审核状态(audit_status=4)、商品状态为查询条件，以列表的形式进行展示，列表项：</p>
+<p>商品编码、商品标题、商品库存、仓库类型、是否有享网做图、市场价、有享价、商品分类、商品状态、审核状态、商品来源、是否首页显示、浏览次数、上架时间、下架时间、添加时间。
+<span style="color:red">按照上架时间升序来排序。</span></p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>同所有商品的查看详细功能。</p>
+</blockquote>
+<p><strong>审核</strong></p>
+<blockquote>
+<p>选中商品，点击审核按钮，进入审核页面，页面内容：同查看详细页面，页面底部有审核意见编辑框、<span style="color:red">商品关联的运费模板及明细</span>、二审通过按钮、二审不通过按钮、修改按钮。</p>
+<p>二审通过</p>
+<p>点击二审通过按钮，需做如下处理：</p>
+<p>1、<span style="color:red">验证该商品是否为待二审状态，若不是，则不能审核。</span></p>
+<p>2、验证：所属售后客服、详细页面主图、往期团购图片、新版列表图片、搜狗API图片，以上字段不能为空。</p>
+<p>3、商品的审核状态置为二审通过(audit_status=5)。</p>
+<p>4、审核意见若没有填写，直接给审核意见赋值——‘二审通过’。</p>
+<p>5、若审核意见不为空，则在审核意见前面加上‘二审通过：’</p>
+<p>二审不通过</p>
+<p>点击而审不通过按钮，需做如下处理：</p>
+<p>1、<span style="color:red">验证该商品是否为待二审状态，若不是，则不能审核。</span></p>
+<p>2、商品审核状态置为二审不通过（audit_status=6）。</p>
+<p>3、审核意见需要填写，并在审核意见前面加上‘二审不通过：’，若为空，则不能提交。</p>
+<p>修改</p>
+<pre><code>同现有后台的修改功能，修改完成后，跳往审核页面。
+
+建议：如果使用现有的修改页面，则需要加参数区分，从二审页面过来的，底部有返回审核页面按钮，保存后返回审核页面。
+     如果是直接点击修改的，底部没有返回审核页面按钮，保存后返回所有商品列表，并查询出修改的那个商品。
+</code></pre>
+
+</blockquote>
+<h4>团购 -&gt; 商品管理 -&gt; 待三审的商品</h4>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>同所有商品的查看详细功能。</p>
+</blockquote>
+<p><strong>审核</strong></p>
+<blockquote>
+<p>选中商品，点击审核按钮，进入审核页面，页面内容：同查看详细页面，页面底部有审核意见编辑框、<span style="color:red">商品关联的运费模板及明细</span>、三审通过按钮、三审不通过按钮。</p>
+<p>三审通过</p>
+<p>点击三审通过按钮，需做如下处理：</p>
+<p>1、<span style="color:red">验证该商品是否为待三审状态，若不是，则不能审核。</span></p>
+<p>2、商品的审核状态置为三审通过(audit_status=7)。</p>
+<p>3、审核意见若没有填写，直接给审核意见赋值——‘三审通过’。</p>
+<p>4、若审核意见不为空，则在审核意见前面加上“三审通过：”</p>
+<p><span style="color:red">三审不通过</span></p>
+<p>点击三审不通过按钮，需做如下处理：</p>
+<p>1、<span style="color:red">验证该商品是否为待三审状态，若不是，则不能审核。</span></p>
+<p>2、商品的审核状态为三审不通过（audit_status=8）。</p>
+<p>3、审核意见需要填写，并在审核意见前面加上‘三审不通过：’，若为空则不能提交。</p>
+</blockquote>
+<h4>团购 -&gt; 物流管理 -&gt; 运费模版管理</h4>
+<p><strong>关联店铺</strong></p>
+<blockquote>
+<p>选中一个运费模板，点击关联店铺按钮，<span style="color:red">判断该运费模板的添加来源是否是供应商（Postagemode.add_from=1），若是，则不能关联，并给出提示。</span> 
+若不是，跳转到关联店铺页面，页面内容：</p>
+<p>运费模板名称、已关联的店铺列表（店铺名称，操作【删除】）、店铺下拉列表（已关联的店铺，不显示在这个下拉列表中）、提交按钮。</p>
+<p>选中一个店铺，点击提交按钮，判断该店铺是否与该运费模板是否已关联（查找shop_postagemode），若已关联，则不能添加，并给出相应的提示信息。</p>
+<p>若未关联，则将店铺ID、运费模板ID、当前用户、当前时间写入到数据库中。
+　</p>
+<p>【删除】</p>
+<pre><code>点击已关联列表中的删除链接，判断该店铺有没有商品（不管商品状态）使用了这个运费模版，如果有，则不能删除，给出提示
+若没有，将该店铺与运费模板的关联删除掉（操作shop_postagemode即可）。
+</code></pre>
+
+</blockquote>
+<h2>数据库设计</h2>
+<h3>商品表 item, 该表已存在</h3>
+<table>
+	<thead>
+		<tr>
+			<th>数据成员名称</th>
+			<th>数据成员类型</th>
+			<th>是否为空</th>
+			<th>说明</th>
+		</tr>
+	</thead>
+	<tbody>		
+		<tr>
+			<td>audit_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>商品审核状态， 1、编辑中 2、待一审 3、一审不通过 4、待二审 5、二审通过 6、二审不通过，7、三审通过、<span style="color:red">8、三审不通过</span>，默认为1</td>
+		</tr>
+		<tr>
+			<td>add_from</td>
+			<td>int</td>
+			<td>否</td>
+			<td>商品添加来源，1：有享网后台，2：供应商，默认为1</td>
+		</tr>
+		<tr>
+			<td>is_edit</td>
+			<td>int</td>
+			<td>否</td>
+			<td>商品是否修改，0：未修改，1：已修改，默认为0，用于复制商品，复制的商品只能修改过之后才能提交</td>
+		</tr>
+		<tr>
+			<td>is_require_make_pic</td>
+			<td>int</td>
+			<td>否</td>
+			<td>是否有享网做图 0：不是 1：是，默认为0</td>
+		</tr>
+		<tr>
+			<td>mark</td>
+			<td>text</td>
+			<td></td>
+			<td>备注，商家要是需要提供做图服务，需要填写相关的备注</td>
+		</tr>
+		<tr>
+			<td>cancel_audited_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>最后一次撤销审核时间</td>
+		</tr>
+	</tbody>
+</table>
+<h3>商品审核意见表 item_audit_suggesion</h3>
+<table>
+	<thead>
+		<tr>
+			<th>数据成员名称</th>
+			<th>数据成员类型</th>
+			<th>是否为空</th>
+			<th>说明</th>
+		</tr>
+	</thead>
+	<tbody>		
+		<tr>
+			<td>iasid</td>
+			<td>int</td>
+			<td>否</td>
+			<td>ID，自增，主键</td>
+		</tr>
+		<tr>
+			<td>iid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>商品编号</td>
+		</tr>
+		<tr>
+			<td>audit_type</td>
+			<td>int</td>
+			<td>否</td>
+			<td>审核类型，1：一审  2、二审</td>
+		</tr>
+		<tr>
+			<td>suggestion</td>
+			<td>text</td>
+			<td>否</td>
+			<td>审核意见</td>
+		</tr>
+		<tr>
+			<td>audited_user</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>审核人</td>
+		</tr>
+		<tr>
+			<td>mark</td>
+			<td>text</td>
+			<td></td>
+			<td>备注</td>
+		</tr>
+		<tr>
+			<td>created_date</td>
+			<td>datetime</td>
+			<td>否</td>
+			<td>创建时间</td>
+		</tr>
+	</tbody>
+</table>
+<h3><span style="color:red">运费模板表 PostageMode 该表已存在</span></h3>
+<table>
+	<thead>
+		<tr>
+			<th>数据成员名称</th>
+			<th>数据成员类型</th>
+			<th>是否为空</th>
+			<th>说明</th>
+		</tr>
+	</thead>
+	<tbody>		
+		<tr>
+			<td>add_from</td>
+			<td>int</td>
+			<td>否</td>
+			<td>添加来源，0:有享网，1：供应商。默认0</td>
+		</tr>
+		<tr>
+			<td>shid</td>
+			<td>int</td>
+			<td></td>
+			<td>商家ID， add_from=1有效</td>
+		</tr>
+	</tbody>
+</table>
+<h3>商家运费模板关联表shop_postagemode</h3>
+<table>
+	<thead>
+		<tr>
+			<th>数据成员名称</th>
+			<th>数据成员类型</th>
+			<th>是否为空</th>
+			<th>说明</th>
+		</tr>
+	</thead>
+	<tbody>		
+		<tr>
+			<td>spid</td>
+			<td>int</td>
+			<td>否</td>
+			<td>ID，自增，主键</td>
+		</tr>
+		<tr>
+			<td>shid</td>
+			<td>int</td>
+			<td>否</td>
+			<td>商家ID</td>
+		</tr>
+		<tr>
+			<td>pmId</td>
+			<td>int</td>
+			<td>否</td>
+			<td>运费模板ID</td>
+		</tr>
+		<tr>
+			<td>created_user</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>创建人</td>
+		</tr>
+		<tr>
+			<td>created_date</td>
+			<td>datetime</td>
+			<td>否</td>
+			<td>创建时间</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

@@ -1,0 +1,1605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>tuan_refunds</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: 29d1c5bc36da364ad5aa86946d420b7bbc54a253 */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>团购售后设计方案</h1>
+<h2>售后流程图</h2>
+<img src="tuan_refunds.jpg"/>
+<h2>功能说明</h2>
+<h3>后台管理系统 yofogoadmin</h3>
+<h4>团购 -&gt; 订单管理 -&gt; 所有订单</h4>
+<p><strong>锁住订单</strong></p>
+<blockquote>
+<p>选择一条订单，点击锁定按钮，需做如下验证：</p>
+<pre><code>该订单是否处于未锁定状态，若已锁定，则给出相应的提醒。
+</code></pre>
+
+<p>验证通过后，将orders.is_lock置为2，若是已支付的订单，同时将该条记录对应的ordersNew.lock也置为2，并写入日志。</p>
+</blockquote>
+<p><strong>解锁</strong></p>
+<blockquote>
+<p>选择一条订单，点击解锁按钮，需做如下验证：</p>
+<pre><code>1、该订单是否处于锁定状态，若未锁定，则给出相应的提醒。
+2、查询售后表after_sales，若有记录，且该记录处于0、1、-1、-2状态，则不能解锁，并给出相应的提示信息。
+3、是否有未完成的业务处理记录，若有，则不能解锁，并给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，将orders.is_lock置为1，若是已支付的订单，同时将该条记录对应的ordersNew.lock也置为1，并写入日志。</p>
+</blockquote>
+<p><strong>提交业务记录</strong></p>
+<blockquote>
+<p><span style="text-decoration:line-through">在原基础上，只有锁定的订单，才可以提交业务处理。完成时，要判断是否有未完成的售后单，如果有，则不能解锁。如果没有，则要解锁订单。</span></p>
+</blockquote>
+<h4>团购 -&gt; 提取订单 -&gt; 未拉单的订单</h4>
+<p><strong>锁住订单</strong></p>
+<blockquote>
+<p>选择一条订单，点击锁定按钮，需做如下验证：</p>
+<pre><code>该订单是否处于未锁定状态，若已锁定，则给出相应的提醒。
+</code></pre>
+
+<p>验证通过后，将orders.is_lock置为2，若是已支付的订单，同时将该条记录对应的ordersNew.lock也置为2，并写入日志。</p>
+</blockquote>
+<p><strong>解锁</strong></p>
+<blockquote>
+<p>选择一条订单，点击解锁按钮，需做如下验证：</p>
+<pre><code>1、该订单是否处于锁定状态，若未锁定，则给出相应的提醒。
+2、查询售后表after_sales，若有记录，且该记录处于0、1、-1、-2状态，则不能解锁，并给出相应的提示信息。
+3、是否有未完成的业务处理记录，若有，则不能解锁，并给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，将orders.is_lock置为1，若是已支付的订单，同时将该条记录对应的ordersNew.lock也置为1，并写入日志。</p>
+</blockquote>
+<h4>团购 -&gt; 提取订单 -&gt; 可拉单的订单</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>查询条件修改为：orders.status in (3,6)去掉，加上back_status!=1的订单。</p>
+</blockquote>
+<p><strong>生成批次</strong></p>
+<blockquote>
+<p>orders.status in (3,6)去掉，加上back_status!=1的订单才会生成批次。（后台+供应商平台）</p>
+</blockquote>
+<p><strong>拉单</strong></p>
+<blockquote>
+<p>拉单时，不会拉出已锁定的订单。订单拉单之后，将订单发货状态置为发货中(delivery_status=2)，同时修改orders及ordersNew表，需放同一个事务中处理。
+原拉单中，在拉完单后，会更新orders及ordersNew表中的发货时间，这个操作需取消。（后台+供应商平台）</p>
+</blockquote>
+<h4>团购 -&gt; 提取订单 -&gt; 锁住订单管理</h4>
+<p><strong>解锁</strong></p>
+<blockquote>
+<p>选择一条订单，点击解锁按钮，需做如下验证：</p>
+<pre><code>1、该订单是否处于锁定状态，若未锁定，则给出相应的提醒。
+2、查询售后表after_sales，若有记录，且该记录处于0、1、-1、-2状态，则不能解锁，并给出相应的提示信息。
+3、是否有未完成的业务处理记录，若有，则不能解锁，并给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，将orders.is_lock置为1，若是已支付的订单，同时将该条记录对应的ordersNew.lock也置为1，并写入日志。</p>
+</blockquote>
+<h4>团购 -&gt; 售后管理 -&gt; 导入物流</h4>
+<p><strong>导入</strong></p>
+<blockquote>
+<p>在原基础上变更为只有发货中且未锁定的订单才能导入，导入的订单，将订单的发货状态置为已发货，并同时更新订单的发货时间。没有导入的订单，在页面上显示错误信息——‘订单号XXX由于XX原因，无法导入！’</p>
+</blockquote>
+<h4>团购 -&gt; 订单管理 -&gt; 已支付的订单(原交易完成的订单)</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>查找已支付订单列表时，查询条件进行变更：通过查找orders.pay_status=1的订单。</p>
+</blockquote>
+<p><strong>锁定</strong></p>
+<blockquote>
+<p>选择一条订单，点击锁定按钮，需做如下验证：</p>
+<pre><code>该订单是否处于未锁定状态，若已锁定，则给出相应的提醒。
+</code></pre>
+
+<p>验证通过后，将orders.is_lock置为2，同时将该条记录对应的ordersNew.lock也置为2，并写入日志。</p>
+</blockquote>
+<p><strong>解锁</strong></p>
+<blockquote>
+<p>选择一条订单，点击解锁按钮，需做如下验证：</p>
+<pre><code>1、该订单是否处于锁定状态，若未锁定，则给出相应的提醒。
+2、查询售后表after_sales，若有记录，且该记录处于0、1、-1、-2状态，则不能解锁，并给出相应的提示信息。
+3、是否有未完成的业务处理记录，若有，则不能解锁，并给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，将orders.is_lock置为1，同时将该条记录对应的ordersNew.lock也置为1，并写入日志。</p>
+</blockquote>
+<p><strong>打回未发货</strong></p>
+<blockquote>
+<p>选择一条订单，点击打回未发货，需做如下验证：</p>
+<pre><code>1、该订单是否已被锁定，若不是，则给出相应的提示信息。
+2、订单的发货状态是否是发货中，若不是，则给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，需对该订单做如下处理：</p>
+<pre><code>1、将订单的发货状态置为未发货(orders.delivery_status=0，ordersNew.delivery_status=0)。
+2、将订单的是否拉单状态置为未拉单（ordersNew.pullsingle = 1），订单批次置为0（ordersNew.batch=0）。
+3、以上操作需在同一个事务中进行。
+</code></pre>
+
+</blockquote>
+<p><strong>改为已发货</strong></p>
+<blockquote>
+<p>选择一条订单，点击改为已发货按钮，需做如下验证：</p>
+<pre><code>1、该订单是否已锁定，若不是，则给出相应的提示信息。
+2、订单的发货状态是否是发货中，若不是，则给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，弹出div层，该层内容：物流公司（下拉列表）、运单号。这两项为必填项
+点击提交后，将物流公司名称、物流公司code、运单号、发货状态（delivery_status=1）、发货时间更新到orders及ordersNew表中，该操作需放同一个事务中。</p>
+</blockquote>
+<p><strong>提交业务处理</strong></p>
+<blockquote>
+<p><span style="text-decoration:line-through">在原基础上，只有锁定的订单，才可以提交业务处理。完成时，要判断是否有未完成的售后单，如果有，则不用解锁。如果没有，则要解锁订单。</span></p>
+</blockquote>
+<p><strong>清空批次按钮</strong></p>
+<blockquote>
+<p>选择一个订单进行操作，需要判断订单是否是已锁定、并且已生成批次，并且未发货的，如果是，才可以清空；否则不能清空。</p>
+</blockquote>
+<p><strong>申请售后</strong></p>
+<blockquote>
+<p>选择一条订单，点击申请售后按钮，需做如下验证：</p>
+<pre><code>1、该订单是否处于锁定状态，若未锁定，则不能申请售后，并给出相应的提醒。
+2、该订单的发货状态是否处于未发货或者已发货状态，若不是，则不能申请售后。
+3、该订单对应的售后单中是否有after_sales.status=0、1、-1、-2，若有，则不能申请售后，并给出提示信息：‘该订单已有退换货正在处理，不能再次申请！’
+4、该订单的状态为已退款（status=5）并且退货状态为已退货（back_status=1），则不能申请售后，并给出提示信息：‘该订单金额与货物全退，不能再申请退换货处理’
+5、如果订单已锁定、并且有批次号、并且未发货，则不能申请售后。给出提示信息：‘需清空批次号！’
+</code></pre>
+
+<p>验证通过后，进入申请售后页面，页面内容：商品名称、订单总金额、运费、使用红包、订单总pv、订单总积分、用户类型、交易创建时间、
+付款时间、买家用户名、收货人姓名、收货人所在省份、收货人所在城市、收货人详细地址、收货人邮编、收货人手机号码、
+订单编号、手机号码、联系人姓名、退回方式（一卡通退款、支付宝、网银、财付通）、银行名称、退回帐号、售后内容、备注。</p>
+<p>其中商品名称、订单总金额、运费、使用红包、订单总PV、
+订单总积分、用户类型、交易创建时间、订单编号、手机号码、联系人姓名从原有的订单中带过来。退回方式根据支付方式来，
+若订单是支付宝支付的，只能选择退回支付宝；财付通支付的，可以退回支付宝、财付通或网银；一卡通支付的，只能选择退回一卡通。
+<span style="color:red">提醒：一卡通与支付宝，退款金额将原路返回！</span></p>
+</blockquote>
+<h4>团购 -&gt; 售后管理 -&gt; 所有退换货申请</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>可以根据售后状态、售后类型、售后编号、订单编号、联系人姓名进行查询，按照售后状态升序，生成时间降序的形式进行排列，
+以售后编号、订单编号、售后类型、商家名称、联系姓名、手机号码、生成时间、售后状态按列表的形式进行展示。默认显示所有售后申请单。</p>
+<p><span style="color:red">查询列表新增一列：是否导出。查询条件增加：按照售后单创建时间的时间段查询、导出状态查询。</span>
+<strong>查看详细</strong></p>
+<p>查看详细页面内容：</p>
+<pre><code>1、售后单详细
+2、订单详细
+3、若已受理的售后单根据售后类型显示退货单、退款单或者换货单列表。
+4、业务处理列表
+具体参考商城售后详细页面。
+</code></pre>
+
+</blockquote>
+<p><strong>受理</strong></p>
+<blockquote>
+<p>选中一条售后申请记录，点击受理按钮，需做如下处理：</p>
+<pre><code>1、给出提示：你确定受理该条售后？
+2、需判断该售后申请是否处于未受理（status=0）状态，若不是，则不能受理，并给出相应的提示信息。
+</code></pre>
+
+<p>处理完成后，进入受理页面，页面内容：</p>
+<p>1、售后类型选择(退货、换货)、售后原因（质量问题、其他厂家问题、物流问题、客户问题、实仓问题、其他问题）、
+回寄地址（有享网、供应商，若是未发货的订单，该内容不显示，如果是实仓且已发货，只能选择：有享网）</p>
+<p>2、售后单详细：售后编号、订单编号、售后标题、退回方式、银行名称、退回帐号、联系手机号码、联系姓名、售后来源、、所属店铺、仓库类型、生成时间、售后内容。</p>
+<p>3、订单详细信息：参考订单详情。</p>
+<p>4.1、选择售后类型为退货后，订单详情下方显示以下内容：</p>
+<pre><code>主订单号、订单金额、商品单价、购买数量、已退商品金额、可退商品金额、已退运费、可退运费、已退数量、可退数量、发货状态
+（另起一行，居中）退货数量（编辑框）、退款商品金额（编辑框）、退款运费（编辑框，数值不能大于可退运费)、退款的商品属性（输入框，不能编辑）、
+供应商扣款金额（输入框）
+</code></pre>
+
+<p>退货数量：若该商品有属性，点击退货数量，弹出div层，内容：编号（复选框）、商品类型、退货数量（&gt;=0）、可退数量。</p>
+<p>点击提交，判断选择的退货数量是否大于等于0，小于等于可退数量，若不是，则不能提交，并给出提示信息，若是，将选择的退货数量写入主页面中，商品属性写入退款的商品属性编辑框中。</p>
+<p>若该商品没有属性，则直接手动输入商品数量，该值需大于等于0，小于等于可退数量。</p>
+<p>输入后，数量*商品价格写入到退款商品金额编辑框中，该值用户可以进行编辑，
+但退款商品金额的值需大于等于0，小于等于可退金额（订单总金额-已退款金额-（总运费-已退运费））。</p>
+<p>提交时，还需验证退款商品金额+退款运费需要小于等于可退总金额（订单总金额-退款金额）</p>
+<p>供应商扣款金额需大于等于0。</p>
+<p>退款运费需大于等于0，小于等于可退运费（总运费-已退运费）。</p>
+<p><span style="color:red">供应商扣款方式：确认函、直接打款（用radio表示，目前暂时将直接打款置灰，到时候再开放），供应商应付运费（编辑框，可正负）</span></p>
+<p>4.2 选择售后类型为换货后，订单详情下方显示以下内容：</p>
+<pre><code>主订单编号、订单金额、商品单价、购买数量、可换数量、发货状态、换货数量（输入框）、换货的商品属性
+</code></pre>
+
+<p>点击换货数量输入框，若该商品有属性，弹出DIV层，内容：编号（复选框）、商品类型、换货数量（&gt;=0）、可换数量、库存。</p>
+<p>点击提交，判断选择的换货数量是否大于等于0，小于等于库存且小于等于可换数量，若不是，则不能提交，并给出提示信息，若是，将选择的换货数量写入主页面中，商品属性写入换货的商品属性编辑框中。</p>
+<p>若该商品没有属性，则直接手动输入换货数量，该值大于等于0，小于等于库存且小于等于可换数量。</p>
+<p>5、售后备注、确定受理按钮。</p>
+<p>点击确认受理按钮，需做如下处理：</p>
+<p>若售后类型为退货：</p>
+<p>1、将售后类型、售后状态（置为1）、售后原因、回寄地址更新到售后申请表中。</p>
+<p>未发货订单：</p>
+<p>i)、回寄地址为无（back<em>address</em>type=0），(即未发货订单，回寄地址只能选择无)，供应商确认状态为无需确认(shop<em>audit</em>status=3)。</p>
+<p>已发货订单：</p>
+<p>ii)、回寄地址为有享网，分以下几种情况：</p>
+<p>仓库类型为实仓，供应商确认状态置为无需确认（shop_audit_status=3）。</p>
+<p>仓库类型为虚仓，供应商状态置为未确认（shop_audit_status=1）。</p>
+<p>iii)、回寄地址为供应商，供应商确认状态置为未确认（shop_audit_status=1）。</p>
+<p>2、生成一条退货单和一条退款单记录，如果是未发货的订单，退货单的状态直接为已完成(status=2)，发货状态为虚拟退货(types=1)。</p>
+<p><span style="color:red">3、若供应商扣款方式是确认函，则在提交售后单后，直接将确认函打印出来。</span></p>
+<p>确认函内容：</p>
+</blockquote>
+<table>
+	<tr>
+		<td colspan="6" align="center">退款确认函</td>
+	</tr>
+	<tr>
+		<td>供应商名称</td>
+		<td colspan="5">XXXX</td>
+	</tr>
+	<tr>
+		<td>商品名称</td>
+		<td>订单编号</td>
+		<td>退货原因</td>
+		<td>退货数量</td>
+		<td>供货价</td>
+		<td>供应商运费</td>
+	</tr>
+	<tr>
+		<td>XX</td>
+		<td>XX</td>
+		<td>XX</td>
+		<td>XX</td>
+		<td>XX</td>
+		<td>XX</td>
+	</tr>
+	<tr>
+		<td>总金额（含运费）</td>
+		<td colspan="5">XXXX</td>
+	</tr>
+	<tr>
+		<td>售后人</td>
+		<td></td>
+		<td>审核人</td>
+		<td>【供应商名称】</td>
+		<td>日期</td>
+		<td>【受理完成的日期】</td>
+	</tr>
+</table>
+<blockquote>
+<p>若售后类型为换货：</p>
+<pre><code>1、将售后类型、售后状态（置为1）、售后原因更新到售后申请表中。
+   i)、仓库类型为实仓，需分以下几种情况：
+        未发货订单，回寄地址为无（back_address_type=0）,供应商确认状态为无需确认(shop_audit_status=3)。
+        已发货订单，需回寄到有享网，供应商确认状态置为无需确认（shop_audit_status=3）；
+  ii)、仓库类型为虚仓，需分如下几种情况：
+        未发货订单：回寄地址为无（back_address_type=0），供应商确认状态为无需确认(shop_audit_status=3)。
+        已发货订单：供应商确认状态直接置为未确认(shop_audit_status=1)；
+2、生成一条换货单记录。如果是未发货的订单，换货单的状态直接为已完成(status=2)，
+   发货状态为虚拟换货（types=1），质检状态为同意换货（quality_check=1）。
+   同时更新订单中的skus，sku_properties这两个字段。
+</code></pre>
+
+<p>受理完成后，将该操作写入到日志中。</p>
+<p>tips:退款金额为0，或退货数量为0，则没有相应的退款单或退货单。如果退款金额和退货数量同时为0，则不能提交。</p>
+</blockquote>
+<p><strong>修改供应商扣款</strong></p>
+<blockquote>
+<p>选中一条售后单，点击修改供应商扣款按钮，需做如下判断：</p>
+<pre><code>1、该售后单是否处于待财审、财审通过、财审未通过状态（status=1||status=-1||status=-2），若不是，则不能操作，并给出提示信息。
+2、该售后单对应的退款单是否处于待审核状态，若不是，则不能操作，并给出提示信息。
+</code></pre>
+
+<p>验证通过后，弹出div层，显示供应商扣款金额（编辑框），用户输入金额后，点击提交，需判断该金额是否大于等于0，若不是，则不予提交，并给出提示信息。</p>
+</blockquote>
+<p><strong>修改售后</strong></p>
+<blockquote>
+<p>选中一条售后单，点击修改售后按钮，需判断该售后单是否是未受理(status=0)、待财审(status=1)、财审未通过(status=-2)的售后单，若不是，则不能修改，并给出相应的提示信息。
+若是，则需作如下处理：</p>
+<pre><code>1、该售后单是未受理的，则只需修改售后单数据即可。
+2、若是待财审或者财审未通过的售后单，若售后类型是退货，需修改售后单数据的同时，修改退货单和退款单的数据。
+   若售后类型是换货，则修改售后单数据的同时，修改换货单的数据。
+3、财审未通过的售后单修改完成后，将售后状态置为待财审。
+4、将供应商的确认状态置为未确认状态，若是未发货的订单是无需确认，若是已发货且是实仓的订单也是无需确认。
+5、若原先没有退货单，修改完后，生成退货单，若订单发货状态为未发货，退货单状态为已完成，质检状态为无需质检。若订单发货状态为已发货，退货单状态为受理中，质检状态为未质检。
+6、需将操作写入日志，原数据与新数据都需写入。
+</code></pre>
+
+<p><span style="color:red">供应商扣款方式不能修改【新增】</span></p>
+</blockquote>
+<p><strong>反财审</strong></p>
+<blockquote>
+<p>选择一条售后单，点击反财审按钮，需做如下验证：</p>
+<pre><code>1、该售后单是否财审通过，若未通过，则不能反财审，并给出相应的提示信息。
+2、若该售后单的售后类型是退货（types=1），需做如下判断：
+    i)、退款单：查找是否有对应的退款单，若有，判断该退款单是否处于待审核状态，若不是，则不能反财审，并给出提示信息。
+               若没有退款单，则不需判断。
+   ii)、退货单：查找有无quality_check=1（同意退货）的退货单，如果有，则不能反财审。
+
+3、若该售后单的售后类型是换货（types=2），则需判断该售后单对应的换货单是否已质检（qualick=1），若是，则不能反财审，需撤销质检后才可以反财审。
+</code></pre>
+
+<p>验证通过后：</p>
+<p>1、若该售后单的售后类型是退货（types=1） 弹出提示信息：‘您确定要反财审吗？反财审后会将售后单打回待审核状态！’
+点击确定后，将该售后单的售后状态置为待财审，将质检状态为2的退货单置为0，更新最后一次反财审时间。</p>
+<p>2、若该售后单的售后类型是换货（types=2） 弹出提示信息：‘您确定要反财审吗？反财审后会将售后单打回待审核状态！’
+点击确定后，将该售后单的售后状态置为待财审。</p>
+<p>3、该操作写入日志。</p>
+</blockquote>
+<p><strong>关闭售后</strong></p>
+<blockquote>
+<p>选中一条售后单，点击关闭售后按钮，弹出提示信息：‘您确定要关闭该售后吗？关闭后不可恢复。’，若是，需做如下判断：</p>
+<pre><code>该售后单是否是未受理或者财审未通过的状态。
+</code></pre>
+
+<p>判断完成后，若售后类型是退货，关闭的售后单需同时关闭退货单和退款单。
+若售后类型是换货，关闭售后单的同时需关闭换货单。以上操作需加上日志。</p>
+</blockquote>
+<p><strong><span style="color:red">筛选导出【新增】</span></strong></p>
+<blockquote>
+<p>选中一条售后单，点击筛选导出按钮，需做如下判断：</p>
+<pre><code>1、该条售后单的供应商确认状态是否为已确认或者无需确认，若不是，则不能筛选导出。
+2、该条售后单对应的退货单是否是已完成状态（若没有退货单，则无需判断）
+3、该条售后单是否有对应的退款单，若没有，则不能筛选导出。
+</code></pre>
+
+<p>验证通过后，弹出div层，显示内容： 售后编号、生成退款申请单按钮[具体参考商城]</p>
+<p>导出的内容：在商城基础上加上供应商扣款金额。</p>
+<p>导出以后，需将售后表的导出状态置为已导出。</p>
+</blockquote>
+<h4>团购 -&gt; 售后管理 -&gt; 待财审退换货</h4>
+<p><strong>审核售后</strong></p>
+<blockquote>
+<p>选中一条售后，点击审核售后按钮，判断是否是待审核的售后单，若是，则进入审核页面，页面内容：</p>
+<pre><code>1、售后单详情
+2、订单详情
+3、根据售后类型显示退货单、退款单列表或者换货单列表。
+4、审核通过按钮、审核不通过按钮。
+</code></pre>
+
+<p><strong>审核通过</strong></p>
+<p>点击审核通过按钮，修改售后单的售后状态为财审通过（status=-1），更新最后一次财审通过时间。</p>
+<p><strong>审核不通过</strong></p>
+<p>点击审核不通过按钮，修改售后单的售后状态为财审不通过（status=-2），更新最后一次财审不通过时间。</p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>查看详细页面内容：</p>
+<pre><code>1、售后单详细
+2、订单详细
+3、若已受理的售后单根据售后类型显示退货单、退款单或者换货单列表。
+4、业务处理列表
+具体参考商城售后详细页面。
+</code></pre>
+
+</blockquote>
+<h4>团购 -&gt; 退货管理 -&gt; 所有退货单</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>以发货状态、退货单状态、质检状况、主订单编号、售后编号为查询条件，按列表的形式进行展示，列表项：退货单、售后编号、
+订单编号、属性名+数量、生成时间、发货状态、退货单状态、质检状态、质检时间、撤销质检时间、物流公司名称，运单号，
+按照退货单状态（status）升序，生成时间降序(created_date)的方式排序。</p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>选中一条退货单，点击查看详细按钮，进入查看详细页面，页面内容：退货单编号、售后编号、订单编号、商品名称、属性数量、退货数量
+生成时间、最后修改时间、退货单状态、发货状态、物流公司名称、物流公司CODE、运单号、退回红包、退回积分、质检报告、质检时间、处理意见、
+质检状态、撤销时间、备注。</p>
+</blockquote>
+<p><strong>收货并质检</strong></p>
+<blockquote>
+<p>选中一条退货单，点击收货并质检按钮，需做如下处理：</p>
+<pre><code>1、给出提示信息：‘您确定要收货并质检吗？请在收到货物并完成质检后再进行该操作！’
+2、该条退货单对应的售后单是否已财审通过，若不是，则不能进行质检，并给出提示信息。
+3、该条退货单对应的售后单的供应商确认状态是否是已确认（shop_audit_status=2）或者无需确认(shop_audit_status=3)，若不是，则不能质检，并给出提示信息。
+4、判断该条退货单的状态是否为受理中（status=1）并且质检状态是否是未质检（quality_check=0），若不是，则不能质检，并给出相应的提示信息。
+5、回寄地址是否是有享网，若不是，则不能操作，并给出提示信息。
+</code></pre>
+
+<p>若是，弹出div层：物流公司（下拉列表，可以为空，若有原数据，则需显示）、运单号（编辑框，可以为空，若有原数据，则需显示）、
+质检报告（编辑框，可以为空，若有原数据，则需显示）、处理意见（编辑框，可以为空，若有原数据，则需显示）。
+表单下方为同意退货与拒绝退货两个按钮。</p>
+<p><strong>同意退货</strong></p>
+<p>点击同意退货按钮后，将物流公司、运单号、质检报告、处理意见、质检时间（当前时间）、退货单状态（status=2）、质检状态（quality_check=1），写入到数据库中。
+若没有相应的退款单，则同时将售后单置为已完成状态。若是合约机订单，若货退掉了，则要改号码状态，若货没退，则不需要改号码状态。
+则修改号码状态为未用状态（需区分新用户与老用户，新用户修改phone_number，老用户修改phone_old_number）。</p>
+<p><strong>拒绝退货</strong></p>
+<p>点击拒绝退货按钮后，将质检状态（quality_check=2）、质检时间（当前时间）、质检报告、处理意见，写入到数据库中。</p>
+</blockquote>
+<p><strong>撤销所有操作</strong></p>
+<blockquote>
+<p>选中一条退货单，点击撤销所有操作按钮，需做如下处理：</p>
+<pre><code>1、给出提示信息：‘您确定要撤销吗？只有当售后单需要反财审时，才需要用到该功能！
+2、只有质检状态为：1同意退货、2拒绝退货才能撤销。
+3、若质检状态为拒绝退货，则将质检状态置为未质检，更新撤销时间。
+4、若质检状态为同意退货，则判断对应的退款单的状态是否等于1，
+   若不是，则不能撤销，并给出相应的提示信息。若是，则修改退货单的状态为受理中，质检状态为未质检状态，更新撤销时间
+</code></pre>
+
+<p>tips: 没有退款单，退货单为已完成状态，售后单为已完成状态，则不能撤销。</p>
+</blockquote>
+<p><strong>录入物流信息</strong></p>
+<blockquote>
+<p>选中一条退货单，点击录入物流信息按钮，判断该订单是否是已发货订单，若不是，则不能操作，并给出提示信息。若是，
+弹出div层：物流公司（下拉列表，不能为空）、运单号（不能为空）。点击提交按钮，将物流公司及物流号写入到数据库中。</p>
+</blockquote>
+<h4>团购 -&gt; 换货管理 -&gt; 所有的换货单</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>根据订单编号、售后编号、换货单编号、发货状态、质检状态、换货单状态为查询条件，以列表的形式进行展示，
+列表项：换货单、售后编号、订单编号、原属性、新属性、换货数量、生成时间、发货状态、换货单状态、质检状态、质检时间、撤销质检时间、物流公司名称，物流公司code
+按照换货单状态（status）升序，生成时间降序(created_date)的方式排序。</p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>选中一条换货单，点击查看详细按钮，进入查看详细页面，页面内容：换货单编号、售后编号、订单编号、商品名称、原属性数量、需换货的属性数量、换货数量
+生成时间、最后修改时间、换货单状态、发货状态、物流公司名称、物流公司CODE、运单号、质检报告、质检时间、处理意见、
+质检状态、撤销时间、备注。</p>
+</blockquote>
+<p><strong>收货并质检</strong></p>
+<blockquote>
+<p>选中一条退货单，点击收货并质检按钮，需做如下处理：</p>
+<pre><code>1、给出提示信息：‘您确定要收货并质检吗？请在收到货物并完成质检后再进行该操作！’
+2、该条退货单对应的售后单是否已财审通过，若不是，则不能进行质检，并给出提示信息。
+3、该条退货单对应的售后单的供应商审核状态是否是已审核（shop_audit_status=2）或者无需审核(shop_audit_status=3)，若不是，则不能质检，并给出提示信息。
+4、判断该条换货单的状态是否为受理中（status=1）并且质检状态是否是未质检（quality_check=0），若不是，则不能质检，并给出相应的提示信息。
+</code></pre>
+
+<p>若是，弹出div层：
+质检报告（编辑框，可以为空，若有原数据，则需显示）、处理意见（编辑框，可以为空，若有原数据，则需显示）。
+表单下方为同意换货与拒绝换货两个按钮。</p>
+<p><strong>同意换货</strong></p>
+<p>点击同意换货按钮后，将物流公司、运单号、质检报告、处理意见、质检时间（当前时间）、换货单状态（status=2）、质检状态（quality_check=1），写入到数据库中。</p>
+<p><strong>拒绝换货</strong></p>
+<p>点击拒绝换货按钮后，将质检状态（quality_check=3）、质检时间（当前时间）、质检报告、处理意见，写入到数据库中。</p>
+</blockquote>
+<p><strong>撤销所有操作</strong></p>
+<blockquote>
+<p>选中一条退货单，点击撤销所有操作按钮，需做如下处理：</p>
+<pre><code>1、给出提示信息：‘您确定要撤销吗？只有当售后单需要反财审时，才需要用到该功能！’
+2、判断发货状态是未发货的，则无需撤销，并给出相应的提示信息。
+3、若发货状态是已发货，但是质检状态为未质检，则无需撤销，并给出相应的提示信息。
+4、若发货状态为已发货，若质检状态为拒绝换货并且换货单状态为受理中，则将质检状态置为未质检，更新撤销时间。
+5、若发货状态为已发货，若质检状态为同意退货，换货单状态为换货中，则将质检状态置为未质检，换货单状态置为受理中，更新撤销时间。
+6、若发货状态为已发货，若质检状态为同意退货，换货单状态为已完成，则不能撤销，并给出提示信息：‘已发生实际换货，不能撤销操作！’
+</code></pre>
+
+</blockquote>
+<p><strong>录入物流信息</strong></p>
+<blockquote>
+<p>选中一条退货单，点击录入物流信息按钮，需做如下判断：</p>
+<pre><code>1、该订单是否是已发货订单，若不是，则不能操作，并给出提示信息。
+2、该退货单状态是否处于换货中，若不是，则不能进行录入。
+</code></pre>
+
+<p>验证通过后，弹出div层：物流公司（下拉列表，不能为空）、订单号（不能为空）。点击提交按钮，将物流公司及物流号写入到数据库中，同时将换货单状态置为已完成。</p>
+</blockquote>
+<h4>团购 -&gt; 退款管理 -&gt; 待审核退款</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>以主订单编号、买家用户名、售后编号、退款单编号为查询条件，按列表的形式进行展示待审核的退款单，
+列表项：售后编号、订单编号、退款金额、退款PV、退红包、退款积分、退货数量、买家用户名、生成时间、退款状态（待审核）、退款方式、收款人账户、银行账号。</p>
+</blockquote>
+<p><strong>审核</strong></p>
+<blockquote>
+<p>选中一条退款单，点击审核按钮，需做如下判断：</p>
+<pre><code>1、判断该退款单是否处于待审核状态，若不是，则给出提示信息。
+2、该退款单对应的售后单是否处于财审通过状态。若不是，则给出相应的提示信息。
+3、该退款单对应的售后单的供应商确认状态是否是已确认或无需确认，若不是，则不能审核，并给出提示信息。
+</code></pre>
+
+<p>验证通过后，进入审核页面，页面内容：</p>
+<p>1 退款单详情</p>
+<p>2 退货单详情、</p>
+<p>3 最高可退PV、输入退款PV（输入框，只能小于等于最高可退PV）、退款红包（输入框）、退款积分（输入框）、供应商扣款金额。</p>
+<p>4、<span style="color:red">供应商扣款方式、供应商扣款状态（若是确认函，则为未扣款。）。若是直接打款，显示供应商打款信息图。</span></p>
+<p>5 订单详情。</p>
+<p>点击提交审核按钮，更改退款单状态为已审核，退款PV，并更新到数据库中。<span style="color:red">若是直接打款，审核通过后，扣款状态置为已扣款。</span></p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>选中一条退款单，点击查看详细按钮，进入查看详细页面，页面内容：退款单详细、订单详细（包含订单、售后单、退货单、业务处理列表），具体参考商城退款单详细页面。</p>
+</blockquote>
+<h4>团购 -&gt; 退款管理 -&gt; 待处理退款</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>以主订单编号、买家用户名、售后编号、退款单编号为查询条件，按列表的形式进行展示已审核的退款单，
+列表项：售后编号、订单编号、退款金额、退款PV、退红包、退款积分、退货数量、买家用户名、生成时间、退款状态（已审核）、退款方式、收款人账户、银行账号。</p>
+</blockquote>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>选中一条退款单，点击查看详细按钮，进入查看详细页面，页面内容：退款单详细、订单详细（包含订单、售后单、退货单、业务处理列表），具体参考商城退款单详细页面。</p>
+</blockquote>
+<p><strong>退款</strong></p>
+<blockquote>
+<p>选中一条退款单，点击审核按钮，需做如下判断：</p>
+<pre><code>1、该退款单是否有对应的退货单，若有，该退货单是否处于已完成状态，若不是，则给出相应的提示信息。
+2、该退款单是否处于已审核状态，若不是，则给出相应的提示信息。
+</code></pre>
+
+<p>验证通过后，进入审核页面，页面分三块内容：</p>
+<pre><code>1、退款单信息。
+2、退款方式、银行名称、退回账户。
+   若订单时支付宝支付的，则只能选择退回支付宝，并且直接调用退款接口退款。
+   若是1卡通支付的，则只能退回1卡通，并且直接调用退款接口退款。
+   若是财付通支付的，可以选择退回支付宝或财付通或网银。
+   以上若是财付通，则线下打款给用户，线上只做数据修改操作。
+3、订单详情。
+</code></pre>
+
+<p>退款成功后，退款单状态置为已退款，售后单置为已完成。
+判断业务处理是否已完成，若未完成，不能解锁订单。若已完成，则将订单解锁（需操作Orders 与ordersNew两个表）。
+更新最后更新时间。更新orders及ordersNew表，将refund<em>post，back</em>status。若是合约机订单，判断是否有退货数量，如果货退掉了，则要改号码状态，如果货没退，则不需要改号码状态。
+则修改号码状态为未用状态（需区分新用户与老用户，新用户修改phone_number，老用户修改phone_old_number）。</p>
+<p><span style="color:red">tips: 不需要处理item和sku表的已卖数量。</span></p>
+</blockquote>
+<p><strong>一卡通退款对账</strong></p>
+<blockquote>
+<p>参考商城</p>
+</blockquote>
+<p><strong>反审核</strong></p>
+<blockquote>
+<p>选中一条退款单，点击反审核按钮，判断该退款单是否处于已审核状态，若不是，则不能反审核。若是，则将退款单状态置为待审核状态。</p>
+</blockquote>
+<p><strong>导出</strong></p>
+<blockquote>
+<p>参考商城</p>
+</blockquote>
+<p><strong>退款查询</strong></p>
+<blockquote>
+<p>参考商城</p>
+</blockquote>
+<h4>团购 -&gt; 退款管理 -&gt; 完成的退款</h4>
+<p><strong>查看详细</strong></p>
+<blockquote>
+<p>选中一条退款单，点击查看详细按钮，进入查看详细页面，页面内容：退款单详细、订单详细（包含订单、售后单、退货单、业务处理列表），具体参考商城退款单详细页面。</p>
+</blockquote>
+<p><strong>导出</strong></p>
+<blockquote>
+<p>参考商城</p>
+</blockquote>
+<h3>团购供应商平台 yfgShop</h3>
+<h4>售后管理 -&gt; 售后列表</h4>
+<p><strong>查询</strong> </p>
+<blockquote>
+<p>通过店铺ID查找售后表（after_sales），获取该店铺的售后列表，
+可通过售后编号、订单编号、售后创建时间段进行查询，以列表的形式进行展示，列表项：售后编号、订单编号、售后原因、创建时间、售后状态、供应商确认状态、仓库类型。
+列表排序：先用供应商确认状态顺序、再用售后状态顺序、再用创建时间倒序。</p>
+</blockquote>
+<p><strong>查看详情</strong></p>
+<blockquote>
+<p>同后台的售后查看详情。</p>
+</blockquote>
+<p><strong>确认</strong></p>
+<blockquote>
+<p>选中一条售后单，点击确认按钮，做如下验证：</p>
+<pre><code>1、该售后单是否已财审通过，若没有，则不能操作，并给出提示信息。
+2、该售后单是否处于供应商未确认状态，若不是，则不能操作，并给出提示信息。
+</code></pre>
+
+<p>验证通过后，将供应商的确认状态置为已确认，同时更新供应商确认时间。</p>
+<p><span style="color:red">在原基础上需增加判断: 1、若供应商扣款方式是确认函，则可以直接点击确认。
+2、若供应商扣款方式是直接打款，需弹出div层，让供应商上传打款信息图片后，才可以点击确认。</span></p>
+</blockquote>
+<p><strong>确认收货</strong></p>
+<blockquote>
+<p>该功能在查看详细页面中，进入查看详细页面，需做如下验证：</p>
+<pre><code>1、仓库类型是虚仓。
+2、售后单回寄地址是供应商。
+3、订单的发货状态是已发货状态
+3、售后单的供应商确认状态是已确认。
+4、对应的退货单的质检状态为未质检且处于受理中。
+</code></pre>
+
+<p>验证通过后，显示确认收货按钮，点击该按钮，将退货单的质检状态置为已质检（quality_check=1），退货单置为已完成状态（status=2）。</p>
+</blockquote>
+<h4>售后管理 -&gt; 待收货退货单</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>查找退货单表，refund_items.status=1&amp;&amp;refund_items.types=2&amp;&amp; after_sales.back_address_type=2的退货单，quality_check显示为收货状态（无需收货、未收货、已收货、拒绝退货）
+列表项：售后编号、退货编号、订单编号、商品名称、退货数量、记录生成时间、退货单状态、发货状态、操作人姓名、收货状态（=质检状态）、收货时间（=质检时间）。</p>
+</blockquote>
+<p><strong>确认收货</strong></p>
+<blockquote>
+<p>选中一条售后单，点击确认收货按钮，做如下验证：</p>
+<pre><code>1、仓库类型是虚仓。
+2、售后单回寄地址是供应商。
+3、订单的发货状态是已发货状态
+3、售后单的供应商确认状态是已确认。
+4、退货单的质检状态为未质检且处于受理中。
+</code></pre>
+
+<p>验证通过后，将退货单的质检状态置为已质检（quality_check=1），退货单置为已完成状态（status=2），若没有退款单，需将售后单置为已完成状态。</p>
+</blockquote>
+<h4>提取订单 -&gt; 可拉单的订单</h4>
+<p><strong>查询</strong></p>
+<blockquote>
+<p>查询条件修改：orders.status in (3,6)去掉，加上back_status!=1的订单。</p>
+</blockquote>
+<p><strong>拉单</strong></p>
+<blockquote>
+<p>拉单时，不会拉出已锁定的订单。拉单之后，订单发货状态置为发货中(delivery_status=2)，同时修改orders及ordersNew表，需放同一个事务中处理。
+原拉单中，在拉完单后，会更新orders及ordersNew表中的发货时间，这个操作需取消。</p>
+</blockquote>
+<p><strong>生成批次</strong></p>
+<blockquote>
+<p>orders.status in (3,6)去掉，加上back_status!=1的订单才会生成批次。</p>
+</blockquote>
+<h4>提取订单 -&gt; 导入物流</h4>
+<p><strong>导入</strong></p>
+<blockquote>
+<p>在原基础上变更为只有发货中且未锁定的订单才能导入，导入的订单，将订单的发货状态置为已发货。没有导入的订单，在页面上显示错误信息——‘订单号XXX由于XX原因，无法导入！’</p>
+</blockquote>
+<h3>yofogoGroup</h3>
+<blockquote>
+<p>团购支付成功后，要将Orders中的支付状态改为已支付。修改：OrderServiceImpl里的payOrderCommon方法。定时器的payOrderCommon也要改。</p>
+</blockquote>
+<h4>原数据完善</h4>
+<blockquote>
+<p>1、由于售后单、退货单都是新增，需要对原有的发生退款的订单进行数据完善。</p>
+<p>遍历退款单表（refund），判断该退款单是否有对应的售后单（做这个判断的原因是因为若完善数据过程中出现问题，对已完善的数据，则无需再次完善），若没有，需对数据做如下处理：</p>
+<pre><code>1、生成售后单：用户名、订单编号、记录生成时间、记录最后修改时间（=记录生成时间）从退款单中带过去。
+             售后类型为退货（types=1）、店铺ID（从商品表中获取）、联系人姓名（从订单中获取）、联系号码（从订单中获取）、
+             售后状态为已完成（status=4）、操作人姓名（admin）。
+             退回方式根据订单的支付方式来，若是财付通或者网银时，银行名称与退回账号直接为空。
+             售后原因直接为6，供应商确认状态为无需确认，最后一次财审通过时间为记录生成时间。
+             若已发货的订单，回寄地址为有享网(back_address_type=1)，未发货订单，回寄地址为无(back_address_type=0)
+
+2、生成退货单：售后编号从第一步获取，订单编号、skus（退款单中是skuNames）、退货数量、生成时间、最后修改时间(=生成时间)、
+             质检时间（=生成时间）从退款单中带过来。
+             获取对应订单中的sku_properties，得到属性名称与数量，与退款单中的skuNames进行匹配，
+             若匹配成功，将该id与数量插入到退货单中的sku_properties（规格如下：1:8x3;1:9x2）。
+             获取订单中的交易名称（=商品表中的商品标题），将该字段的内容写入到退货单中的商品名称。
+             退货单状态置为已完成（status=2），发货状态根据退款单中的是否发货（delivery）字段来赋值。
+             若未发货的订单，质检状态为无需质检（quality_check=0），已发货订单，质检状态为同意退货（quality_check=1）。
+             物流公司、物流公司code、运单号都写入固定值，固定值待定。
+             操作人名称为 admin。
+             其余字段都可以为空。
+
+3、完善退款单：售后编号从第一步中生成的售后单获取。最后更新时间（=生成时间）、退款状态为已退款（status=3）、退款方式根据订单的支付方式来，
+             若是财付通或者网银时，银行名称与退回账号直接为空。 操作人名称为 admin。
+
+4、完善订单：根据退货单中的skus与订单中的skus匹配，若相同，则为全部退货，若不相同，则为部分退货。退货单中的skus未空，则为未退货。更新时需
+            更新orders，ordersNew两个表。
+
+5、以上4步操作需放在同一个事务中处理。
+</code></pre>
+
+<p>2、修改原有订单中的支付状态：直接用SQL更新已有数据中status=3的订单，将这些订单的pay_status的状态置为已支付。</p>
+</blockquote>
+<p><strong>tips : <span style="color:red">原来的退款功能去掉。新流程上线后再去掉</span></strong></p>
+<h2>数据库设计</h2>
+<h3>主订单表 Orders 表已存在，只显示新增的字段</h3>
+<table>
+	<thead>
+		<tr>
+			<td>数据成员名称</td>
+			<td>数据成员类型</td>
+			<td>是否为空</td>
+			<td>说明</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>is_locked</td>
+			<td>int</td>
+			<td>否</td>
+			<td>是否锁定，1未锁定，2锁定，默认为1</td>
+		</tr>
+		<tr>
+			<td>back_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>订单退货状态，0未退货、1已退货、2部分退货。默认为0</td>
+		</tr>
+		<tr>
+			<td>refund_post</td>
+			<td>decimal(10,2)</td>
+			<td>否</td>
+			<td>总退款运费，默认为0</td>
+		</tr>
+		<tr>
+			<td>delivery_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>发货状态，0未发货，1已发货，2 发货中。默认0。（该字段已有，增加了2 发货中这个选项）</td>
+		</tr>
+		<tr>
+			<td>pay_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>是否已支付， 0：未支付，1：已支付，默认为0</td>
+		</tr>
+	</tbody>
+</table>
+<h3>新主订单表 OrdersNew 表已存在，只显示新增的字段</h3>
+<table>
+	<thead>
+		<tr>
+			<td>数据成员名称</td>
+			<td>数据成员类型</td>
+			<td>是否为空</td>
+			<td>说明</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>back_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>订单退货状态，0未退货、1已退货、2部分退货。默认为0</td>
+		</tr>
+		<tr>
+			<td>refund_post</td>
+			<td>decimal(10,2)</td>
+			<td>否</td>
+			<td>总退款运费，默认为0</td>
+		</tr>
+		<tr>
+			<td>delivery_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>发货状态，0未发货，1已发货，2 发货中。默认0。（该字段已有，增加了2 发货中这个选项）</td>
+		</tr>
+	</tbody>
+</table>
+<h3>售后申请表 after_sales</h3>
+<table>
+	<thead>
+		<tr>
+			<td>数据成员名称</td>
+			<td>数据成员类型</td>
+			<td>是否为空</td>
+			<td>说明</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>afid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>售后编号，程序生成，主键</td>
+		</tr>
+		<tr>
+			<td>buyer_username</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>用户名</td>
+		</tr>
+		<tr>
+			<td>oid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>订单编号</td>
+		</tr>
+		<tr>
+			<td>shid</td>
+			<td>int</td>
+			<td>否</td>
+			<td>店铺ID</td>
+		</tr>
+		<tr>
+			<td>types</td>
+			<td>int</td>
+			<td>否</td>
+			<td>售后类型，0：无类型 1：退货 2：换货，默认为0</td>
+		</tr>
+		<tr>
+			<td>titles</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>售后标题</td>
+		</tr>
+		<tr>
+			<td>contents</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>售后详细内容</td>
+		</tr>
+		<tr>
+			<td>mobilephone</td>
+			<td>varchar(20)</td>
+			<td></td>
+			<td>联系人手机号码</td>
+		</tr>
+		<tr>
+			<td>realname</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>联系人姓名</td>
+		</tr>
+		<tr>
+			<td>created_date</td>
+			<td>datetime</td>
+			<td>否</td>
+			<td>记录生成时间</td>
+		</tr>
+		<tr>
+			<td>modify_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>记录最后修改时间</td>
+		</tr>
+		<tr>
+			<td>remarks</td>
+			<td>varchar(2500)</td>
+			<td></td>
+			<td>备注</td>
+		</tr>
+		<tr>
+			<td>status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>售后状态，0未受理、1待财审、2已被拒绝、3已关闭、4已完成、-1财审通过、-2财审未通过，默认为0</td>
+		</tr>
+		<tr>
+			<td>from_type</td>
+			<td>int</td>
+			<td>否</td>
+			<td>售后来源，1用户提交，2客服添加，默认为2</td>
+		</tr>
+		<tr>
+			<td>back_address_type</td>
+			<td>int</td>
+			<td>否</td>
+			<td>回寄地址类型，0无、1有享网、2供应商，默认为0</td>
+		</tr>
+		<tr>
+			<td>shop_audit_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>供应商确认状态，1:未确认，2：已确认，3：无需确认，默认为1</td>
+		</tr>
+		<tr>
+			<td>shop_audit_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>供应商确认时间</td>
+		</tr>
+		<tr>
+			<td>reverse_audit_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>最后一次反财审时间</td>
+		</tr>
+		<tr>
+			<td>audit_agree_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>最后一次财审通过时间</td>
+		</tr>
+		<tr>
+			<td>audit_disagree_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>最后一次财审不通过时间</td>
+		</tr>
+		<tr>
+			<td>message</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>拒绝或审核未通过的理由</td>
+		</tr>
+		<tr>
+			<td>admin_id</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>操作人id</td>
+		</tr>
+		<tr>
+			<td>admin_name</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>操作人姓名</td>
+		</tr>
+		<tr>
+			<td>back_types</td>
+			<td>int</td>
+			<td></td>
+			<td>退回方式，1:1卡通、2:支付宝、3:财付通、4:网银。自动带入退款表</td>
+		</tr>
+		<tr>
+			<td>bank_name</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>银行名称，当back_types为4时有效。自动带入退款表</td>
+		</tr>
+		<tr>
+			<td>back_no</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>退回帐号，1卡通的为用户名、支付宝的为支付宝帐号、网银的为银行帐号。自动带入退款表</td>
+		</tr>
+		<tr>
+			<td>reason</td>
+			<td>int</td>
+			<td></td>
+			<td>售后原因(1:质量问题 2：其他厂家问题 3：物流问题 4：客户问题 5：实仓问题 6：其他问题)</td>
+		</tr>
+		<tr>
+			<td>F_TimeStamp</td>
+			<td>timestamp</td>
+			<td></td>
+			<td>更新标识字段</td>
+		</tr>
+		<tr>
+			<td>is_export</td>
+			<td>int</td>
+			<td></td>
+			<td>是否导出，0未导出，1已导出  默认0</td>
+		</tr>
+	</tbody>
+</table>
+<h3>退款单 refund 该表已存在</h3>
+<table>
+	<thead>
+		<tr>
+			<td>数据成员名称</td>
+			<td>数据成员类型</td>
+			<td>是否为空</td>
+			<td>说明</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>refund_post</td>
+			<td>decimal(10,2)</td>
+			<td>否</td>
+			<td>退款运费，默认为0</td>
+		</tr>
+		<tr>
+			<td>afid</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>售后编号</td>
+		</tr>
+		<tr>
+			<td>updated_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>最后更新时间（退款时间）</td>
+		</tr>
+		<tr>
+			<td>status</td>
+			<td>int</td>
+			<td></td>
+			<td>退款状态，1待审核、2已审核、3已退款、4、已关闭、5退款中</td>
+		</tr>
+		<tr>
+			<td>refund_types</td>
+			<td>int</td>
+			<td></td>
+			<td>退款方式，1:1卡通、2:支付宝、3:财付通、4:网银。</td>
+		</tr>
+		<tr>
+			<td>bank_name</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>银行名称，当refund_types为4时有效</td>
+		</tr>
+		<tr>
+			<td>pay_no</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>退回账户：一卡通的为用户名、支付宝的为支付宝帐号、网银的为银行帐号</td>
+		</tr>
+		<tr>
+			<td>shop_debited_amount</td>
+			<td>decimal(10,2)</td>
+			<td>否</td>
+			<td>供应商扣款金额，默认为0</td>
+		</tr>
+		<tr>
+			<td>pay_type</td>
+			<td>int</td>
+			<td>否</td>
+			<td>付款方式，1：确认函，2：直接打款，默认为1</td>
+		</tr>
+		<tr>
+			<td>shop_debited_status</td>
+			<td>int</td>
+			<td>否</td>
+			<td>供应商扣款状态，1：未扣款，2：已扣款，默认为1</td>
+		</tr>
+		<tr>
+			<td>shop_debited_image</td>
+			<td>varchar(500)</td>
+			<td></td>
+			<td>供应商打款信息图</td>
+		</tr>
+		<tr>
+			<td>shop_post_fee</td>
+			<td>decimal(10,2)</td>
+			<td>否</td>
+			<td>供应商应付运费，默认为0</td>
+		</tr>
+		<tr>
+			<td><span style="color:red">shop_debited_date</span></td>
+			<td><span style="color:red">datetime</span></td>
+			<td></td>
+			<td><span style="color:red">扣款时间</span></td>
+		</tr>
+		<tr>
+			<td><span style="color:red">shop_debited_operator</span></td>
+			<td><span style="color:red">varchar(50)</span></td>
+			<td></td>
+			<td><span style="color:red">扣款操作人</span></td>
+		</tr>
+		<tr>
+			<td>refund_serial_no</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>1卡通退款成功的流水号</td>
+		</tr>
+		<tr>
+			<td>admin_id</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>操作人id</td>
+		</tr>
+		<tr>
+			<td>admin_name</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>操作人姓名</td>
+		</tr>
+	</tbody>
+</table>
+<h3>退货单表 refund_items</h3>
+<table>
+	<thead>
+		<tr>
+			<td>数据成员名称</td>
+			<td>数据成员类型</td>
+			<td>是否为空</td>
+			<td>说明</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>riid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>退货单编号，程序生成，主键</td>
+		</tr>
+		<tr>
+			<td>afid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>售后编号</td>
+		</tr>
+		<tr>
+			<td>oid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>订单编号</td>
+		</tr>
+		<tr>
+			<td>title</td>
+			<td>varchar(800)</td>
+			<td>否</td>
+			<td>商品名称</td>
+		</tr>
+		<tr>
+			<td>sku_properties</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>SKU的ID值组合字符串，格式：1:8x3;1:9x2</td>
+		</tr>
+		<tr>
+			<td>skus</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>sku属性名组合字符串，格式：属性x数量;属性x数量等</td>
+		</tr>
+		<tr>
+			<td>nums</td>
+			<td>int</td>
+			<td></td>
+			<td>退货数量</td>
+		</tr>
+		<tr>
+			<td>created_date</td>
+			<td>datetime</td>
+			<td>否</td>
+			<td>记录生成时间</td>
+		</tr>
+		<tr>
+			<td>updated_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>最后修改时间</td>
+		</tr>
+		<tr>
+			<td>remarks</td>
+			<td>varchar(500)</td>
+			<td></td>
+			<td>备注</td>
+		</tr>
+		<tr>
+			<td>status</td>
+			<td>int</td>
+			<td></td>
+			<td>退货单状态，1受理中、2已完成、3已关闭，默认1（未发货直接为2）</td>
+		</tr>
+		<tr>
+			<td>types</td>
+			<td>int</td>
+			<td></td>
+			<td>发货状态，1虚拟退货(未发货，只做记录，status直接为2)、2实际退货(已发货)，默认2</td>
+		</tr>
+		<tr>
+			<td>logi_name</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>物流公司名称</td>
+		</tr>
+		<tr>
+			<td>logi_code</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>物流公司code</td>
+		</tr>
+		<tr>
+			<td>logi_no</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>运单号</td>
+		</tr>
+		<tr>
+			<td>admin_id</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>操作人id</td>
+		</tr>
+		<tr>
+			<td>admin_name</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>操作人姓名</td>
+		</tr>
+		<tr>
+			<td>check_report</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>质检报告</td>
+		</tr>
+		<tr>
+			<td>suggestion</td>
+			<td>varchar(500)</td>
+			<td></td>
+			<td>处理意见</td>
+		</tr>
+		<tr>
+			<td>quality_check</td>
+			<td>int</td>
+			<td>否</td>
+			<td>质检状态，0未质检/无需质检、1同意退货、2拒绝退货。默认0</td>
+		</tr>
+		<tr>
+			<td>quality_check_time</td>
+			<td>datetime</td>
+			<td></td>
+			<td>质检时间</td>
+		</tr>
+		<tr>
+			<td>quality_check_revoke_time</td>
+			<td>datetime</td>
+			<td></td>
+			<td>撤销时间</td>
+		</tr>
+	</tbody>
+</table>
+<h3>换货单表 change_items</h3>
+<table>
+	<thead>
+		<tr>
+			<td>数据成员名称</td>
+			<td>数据成员类型</td>
+			<td>是否为空</td>
+			<td>说明</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>riid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>换货单编号，程序生成</td>
+		</tr>
+		<tr>
+			<td>afid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>售后编号</td>
+		</tr>
+		<tr>
+			<td>oid</td>
+			<td>varchar(50)</td>
+			<td>否</td>
+			<td>订单编号</td>
+		</tr>
+		<tr>
+			<td>old_sku_properties</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>SKU的ID值组合字符串，格式：1:8x3;1:9x2</td>
+		</tr>
+		<tr>
+			<td>old_skus</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>sku属性名组合字符串，格式：属性x数量;属性x数量等</td>
+		</tr>
+		<tr>
+			<td>sku_properties</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>SKU的ID值组合字符串，格式：1:8x3;1:9x2</td>
+		</tr>
+		<tr>
+			<td>skus</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>sku属性名组合字符串，格式：属性x数量;属性x数量等</td>
+		</tr>
+		<tr>
+			<td>nums</td>
+			<td>int</td>
+			<td></td>
+			<td>换货数量</td>
+		</tr>
+		<tr>
+			<td>created_date</td>
+			<td>datetime</td>
+			<td>否</td>
+			<td>记录生成时间</td>
+		</tr>
+		<tr>
+			<td>updated_date</td>
+			<td>datetime</td>
+			<td></td>
+			<td>最后修改时间</td>
+		</tr>
+		<tr>
+			<td>remarks</td>
+			<td>varchar(500)</td>
+			<td></td>
+			<td>备注</td>
+		</tr>
+		<tr>
+			<td>status</td>
+			<td>int</td>
+			<td></td>
+			<td>换货单状态，1受理中、2 换货中、 3 已完成、4 已关闭，默认1（未发货直接为2）</td>
+		</tr>
+		<tr>
+			<td>types</td>
+			<td>int</td>
+			<td></td>
+			<td>发货状态，1虚拟换货(未发货，只做记录，status直接为2)、2实际换货(已发货)，默认2</td>
+		</tr>
+		<tr>
+			<td>logi_name</td>
+			<td>varchar(100)</td>
+			<td></td>
+			<td>物流公司名称</td>
+		</tr>
+		<tr>
+			<td>logi_code</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>物流公司code</td>
+		</tr>
+		<tr>
+			<td>logi_no</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>运单号</td>
+		</tr>
+		<tr>
+			<td>admin_id</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>操作人id</td>
+		</tr>
+		<tr>
+			<td>admin_name</td>
+			<td>varchar(50)</td>
+			<td></td>
+			<td>操作人姓名</td>
+		</tr>
+		<tr>
+			<td>check_report</td>
+			<td>varchar(1000)</td>
+			<td></td>
+			<td>质检报告</td>
+		</tr>
+		<tr>
+			<td>suggestion</td>
+			<td>varchar(500)</td>
+			<td></td>
+			<td>处理意见</td>
+		</tr>
+		<tr>
+			<td>quality_check</td>
+			<td>int</td>
+			<td>否</td>
+			<td>质检状态，0未质检、1同意换货、2拒绝换货。默认0</td>
+		</tr>
+		<tr>
+			<td>quality_check_time</td>
+			<td>datetime</td>
+			<td></td>
+			<td>质检时间</td>
+		</tr>
+		<tr>
+			<td>quality_check_revoke_time</td>
+			<td>datetime</td>
+			<td></td>
+			<td>撤销时间</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
